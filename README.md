@@ -1,4 +1,6 @@
-Demo example windows app and .Net component for listening to music from the popular Atlas.Music service.
+DOLBY DIGITAL BROADCASTING OF MUSIC AND PODCASTS VIA UNICAST PROTOCOL
+
+(Demo example windows app and .Net component for listening to music from the popular Atlas.Music service)
 
 The service broadcasts original music using the UNICAST protocol, which allows you to listen to music of your choice.
 The Atlas.Music music library contains a large amount of musical material for different preferences.
