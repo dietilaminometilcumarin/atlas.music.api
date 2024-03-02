@@ -18,4 +18,5 @@ P.S. For the component to work, you must have an installed last version of the V
 Current releases 
 
 for smartphone: https://play.google.com/store/apps/details?id=com.music.detach
+
 for home theater, car: https://drive.google.com/file/d/1mr1p2ILKHSWGhcLFjH0suCHGlo1rzPvY/view?usp=drive_link
