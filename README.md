@@ -14,3 +14,7 @@ However, the ability to listen to music in surround format is disabled in the fr
 If you have any questions or would like to help in the development of this project, please email to atlas.callback@gmail.com
 
 P.S. For the component to work, you must have an installed last version of the VLC player (videolan.org) with a plugin registered.
+Android Releases: 
+
+Smartphone app: https://play.google.com/store/apps/details?id=com.music.detach
+Home theater, car:  https://drive.google.com/file/d/1mr1p2ILKHSWGhcLFjH0suCHGlo1rzPvY/view?usp=drive_link
