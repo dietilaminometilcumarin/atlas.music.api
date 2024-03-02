@@ -16,5 +16,8 @@ If you have any questions or would like to help in the development of this proje
 P.S. For the component to work, you must have an installed last version of the VLC player (videolan.org) with a plugin registered.
 Android Releases: 
 
-Smartphone app: https://play.google.com/store/apps/details?id=com.music.detach
-Home theater, car:  https://drive.google.com/file/d/1mr1p2ILKHSWGhcLFjH0suCHGlo1rzPvY/view?usp=drive_link
+Smartphone app: 
+https://play.google.com/store/apps/details?id=com.music.detach
+
+Home theater, car:  
+https://drive.google.com/file/d/1mr1p2ILKHSWGhcLFjH0suCHGlo1rzPvY/view?usp=drive_link
