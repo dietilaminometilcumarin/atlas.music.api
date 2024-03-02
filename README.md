@@ -11,4 +11,4 @@ However, the ability to listen to music in surround format is disabled in the fr
 
 If you have any questions or would like to help in the development of this project, please email to atlas.callback@gmail.com
 
-P.S. For the component to work, you must have an installed last version of the VLC player with a plugin registered.
+P.S. For the component to work, you must have an installed last version of the VLC player (videolan.org) with a plugin registered.
