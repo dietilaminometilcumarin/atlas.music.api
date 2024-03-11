@@ -17,16 +17,30 @@
 
 
 Imports Atlas_API
+Imports Microsoft.Win32
 
 Public Class Form1
 
     'THE COMPONENT CONTAINS SOME EVENTS SO LET'S CONNECT USING - WithEvents
     Public WithEvents TCPC As Atlas_Music_API = Atlas_Music_API.Instance
 
-    'INITIALIZING CONNECTION TO THE SERVER
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim strPath As String = My.Application.Info.DirectoryPath & "\" & My.Application.Info.AssemblyName & ".exe"
+        Using myKey As RegistryKey = Registry.ClassesRoot.CreateSubKey("muzon")
+            myKey.SetValue("URL Protocol", "")
+            myKey.CreateSubKey("DefaultIcon").SetValue("", """" & strPath & ",0""")
+            myKey.CreateSubKey("shell\open\command").SetValue("", """" & strPath & """" & " " & """%1""")
+            myKey.Close()
+        End Using
+
+        'INITIALIZING CONNECTION TO THE SERVER
         If TCPC.ConnectToServer("TOKEN") Then
-            Beep()
+            Dim strArg() As String
+            strArg = Command().Split("/")
+            If strArg.Count > 2 Then
+                TextBox1.Text = strArg(2)
+                Button1_Click(Nothing, Nothing)
+            End If
         Else
             MsgBox("Error Connection")
             End
@@ -79,4 +93,15 @@ Public Class Form1
     End Sub
 
 
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim playList As List(Of Atlas_Music_API.ListMusicData) = TCPC.GetMusicInfo(TextBox1.Text)
+        ListView1.Items.Clear()
+        For Each item As Atlas_Music_API.ListMusicData In playList
+            Dim lItem As ListViewItem = ListView1.Items.Add(item.ID)
+            lItem.SubItems.Add(item.TrackName)
+            lItem.SubItems.Add(item.ArtistName)
+            lItem.SubItems.Add(item.TrackGenre)
+            lItem.SubItems.Add(item.TrackDuration)
+        Next
+    End Sub
 End Class
